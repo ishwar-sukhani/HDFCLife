@@ -1,0 +1,38 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.hdfc</groupId>
+	<artifactId>HDFCLife</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>HDFCLife</name>
+	<url>http://maven.apache.org</url>
+
+	<properties>
+		<selenium-jar-version>3.14.0</selenium-jar-version>
+		<testng-jar-version>6.14.3</testng-jar-version>
+		<surefire-version>2.18.1</surefire-version>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+	</properties>
+
+	<dependencies>
+		<!-- Selenium Dependency -->
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>${selenium-jar-version}</version>
+		</dependency>
+		
+		<!-- TestNG Dependency -->
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>${testng-jar-version}</version>
+			<scope>test</scope>
+		</dependency>
+
+
+	</dependencies>
+</project>
