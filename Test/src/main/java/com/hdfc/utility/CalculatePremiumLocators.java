@@ -46,6 +46,14 @@ public interface CalculatePremiumLocators {
     
     By calendar = By.xpath( "//div[@class='dwcc']//div[@id='dob_dw_pnl_0']" );
     
+    By monthInCalendar = By.xpath( "//*[@id='dob_dw_pnl_0']//div[@class='dw-cal-btnw']//div[@class='dw-cal-btnw-m']/span" );
+    
+    By nextMonth_Btn = By.xpath( "//*[@id='dob_dw_pnl_0']//div[@class='dw-cal-btnw']//div[starts-with(@class,'dw-cal-next-m')]" );
+    
+    By dayInCalendar = By.xpath( "//div[starts-with(@id,'mobi')]//div[@class='dw-cal-table']//div[@class='dw-cal-row']/div" );
+    
+    By setBtnInCalendar = By.xpath( "//div[@class='dwbw dwb-s']//div[text()='Set']" );
+    
     /** The tobacco user smoke. */
     By tobaccoUserSmoke = By.xpath( "//div[@id='Nri_No']//li[@class='dvCigaret']//div//input[@id='smoke']/following::label" );
     
@@ -63,4 +71,6 @@ public interface CalculatePremiumLocators {
     
     /** The proceed btn. */
     By proceed_Btn = By.id( "btnPersonalDtls" );
+    
+    
 }
