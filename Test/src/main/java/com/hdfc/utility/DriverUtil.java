@@ -14,6 +14,7 @@ public class DriverUtil {
     /** The driver. */
     private static WebDriver driver;
 
+    // to initialize the Driver before hand
     static {
 
         ChromeOptions options = new ChromeOptions();

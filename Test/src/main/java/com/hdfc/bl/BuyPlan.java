@@ -10,14 +10,14 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.hdfc.helper.BuyPlanHelper;
-import com.hdfc.utility.CalculatePremiumLocators;
+import com.hdfc.locators.BuyPlanLocators;
 import com.hdfc.utility.Constant;
 import com.hdfc.utility.DriverUtil;
 
 /**
  * The Class BuyPlan.
  */
-public class BuyPlan implements CalculatePremiumLocators {
+public class BuyPlan implements BuyPlanLocators {
 
     /** The Constant logger. */
     final static Logger logger = Logger.getLogger( BuyPlan.class );

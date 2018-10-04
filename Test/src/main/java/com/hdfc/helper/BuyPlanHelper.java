@@ -12,13 +12,13 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import com.hdfc.utility.CalculatePremiumLocators;
+import com.hdfc.locators.BuyPlanLocators;
 import com.hdfc.utility.Constant;
 
 /**
  * The Class BuyPlanHelper.
  */
-public class BuyPlanHelper implements CalculatePremiumLocators {
+public class BuyPlanHelper implements BuyPlanLocators {
     /** The Constant logger. */
     final static Logger logger = Logger.getLogger( BuyPlanHelper.class );
 

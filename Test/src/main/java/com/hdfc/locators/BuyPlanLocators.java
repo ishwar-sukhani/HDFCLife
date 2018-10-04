@@ -1,11 +1,11 @@
-package com.hdfc.utility;
+package com.hdfc.locators;
 
 import org.openqa.selenium.By;
 
 /**
- * The Interface CalculatePremiumLocators.
+ * The Interface BuyPlanLocators.
  */
-public interface CalculatePremiumLocators {
+public interface BuyPlanLocators {
 
     /** The buy online btn. */
     // Locators of HomePage
