@@ -2,10 +2,8 @@ package com.hdfc.tests;
 
 import java.awt.AWTException;
 
-import com.hdfc.helper.BuyPlan;
-import com.hdfc.utility.DriverUtil;
+import com.hdfc.bl.BuyPlan;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class AppMain.
  */
@@ -15,8 +13,8 @@ public class AppMain {
      * The main method.
      *
      * @param args the arguments
-     * @throws InterruptedException 
-     * @throws AWTException 
+     * @throws InterruptedException
+     * @throws AWTException
      */
     public static void main( String[] args ) throws InterruptedException, AWTException {
 
