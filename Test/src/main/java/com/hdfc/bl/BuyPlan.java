@@ -100,6 +100,7 @@ public class BuyPlan implements CalculatePremiumLocators {
         buyPlanHelper.handleLastName();
 
         buyPlanHelper.handleMobileNumber();
+        
         buyPlanHelper.handleEmailId();
 
         buyPlanHelper.handleDOB();
