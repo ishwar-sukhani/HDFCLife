@@ -54,7 +54,7 @@ public class BuyPlan implements BuyPlanLocators {
      * @description This method will click Buy Online button on HDFC Life homepage
      */
     public void buyInsuranceOnline() {
-        buyPlanHelper.handdleBuyInsuranceOnline();
+        buyPlanHelper.handleBuyInsuranceOnline();
     }
 
     /**
@@ -85,12 +85,13 @@ public class BuyPlan implements BuyPlanLocators {
      *
      * @param driver the driver
      * @throws AWTException the AWT exception
+     * @throws InterruptedException 
      * @description
      */
-    public void enterPersonalDetails( WebDriver driver ) throws AWTException {
+    public void enterPersonalDetails( WebDriver driver ) throws AWTException, InterruptedException {
 
         buyPlanHelper.handleMultipleWindows();
-
+        
         buyPlanHelper.handleNRIButton();
 
         buyPlanHelper.handleGenderButton();

@@ -6,8 +6,10 @@ import java.awt.event.KeyEvent;
 import java.util.Set;
 
 import org.apache.log4j.Logger;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -39,7 +41,7 @@ public class BuyPlanHelper implements BuyPlanLocators {
         this.wait = wait;
         this.driver = driver;
     }
-
+   
     /**
      * Handle multiple windows.
      */
@@ -56,20 +58,31 @@ public class BuyPlanHelper implements BuyPlanLocators {
             }
         }
     }
+    
+    public void waitForLoad(WebDriver driver) {
+        ExpectedCondition<Boolean> pageLoadCondition = new ExpectedCondition<Boolean>() {
+                    public Boolean apply(WebDriver driver) {
+                        return ((JavascriptExecutor)driver).executeScript("return document.readyState").equals("complete");
+                    }
+                };
+        wait.until(pageLoadCondition);
+    }
 
     /**
      * Handle NRI button.
      */
     public void handleNRIButton() {
-        wait.until( ExpectedConditions.visibilityOfElementLocated( NRI_NO ) );
+    	waitForLoad(driver);
+    	wait.until( ExpectedConditions.elementToBeClickable( NRI_NO ) );
         driver.findElement( NRI_NO ).click();
         logger.debug( "CLICKED NRI NO IMAGE" );
     }
-
+    
     /**
      * Handle gender button.
      */
     public void handleGenderButton() {
+    	wait.until( ExpectedConditions.elementToBeClickable( femaleImage ) );
         driver.findElement( femaleImage ).click();
         logger.debug( "CLICKED FEMALE GENDER IMAGE" );
     }
@@ -145,6 +158,7 @@ public class BuyPlanHelper implements BuyPlanLocators {
      * Handle pincode.
      */
     public void handlePincode() {
+    	wait.until(ExpectedConditions.elementToBeClickable( pincode ));
         driver.findElement( pincode ).sendKeys( Constant.PIN_CODE );
         logger.debug( "PIN ENTERED" );
     }
@@ -193,7 +207,7 @@ public class BuyPlanHelper implements BuyPlanLocators {
     /**
      * Handdle buy insurance online.
      */
-    public void handdleBuyInsuranceOnline() {
+    public void handleBuyInsuranceOnline() {
         if ( driver.getTitle().contains( Constant.TITLE_LIFE_INSURANCE_PLANS ) ) {
             wait.until( ExpectedConditions.elementToBeClickable( buyOnline_Btn ) );
             driver.findElement( buyOnline_Btn ).click();

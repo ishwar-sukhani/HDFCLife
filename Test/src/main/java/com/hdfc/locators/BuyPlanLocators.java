@@ -20,7 +20,7 @@ public interface BuyPlanLocators {
 
     /** The nri no. */
     // Locators of Insurance Form page
-    By NRI_NO = By.xpath( "//*[@id='personaldtls']//div[@class='selCircle']/input[@id='btnNo']/following::label" );
+    By NRI_NO = By.xpath( "//input[@id='btnNo']/following::label" );
 
     /** The male image. */
     By maleImage = By.xpath( "//*[@id='personaldtls']//div[@class='selCircle']/input[@id='malegender']/following::label" );
